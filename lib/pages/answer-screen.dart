@@ -27,6 +27,7 @@ class AnswerScreen extends StatelessWidget {
     var correctanswers = summerydata.where((data) {
       return data['user-selected'] == data['correct-answer'];
     }).length;
+
     return Scaffold(
       backgroundColor: Colors.transparent,
       body: Center(

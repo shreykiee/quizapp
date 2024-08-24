@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
 class Summerybuilder extends StatelessWidget {
-  const Summerybuilder({super.key, required this.summarydata});
+  const Summerybuilder({
+    super.key,
+    required this.summarydata,
+  });
 
   final List<Map<String, Object>> summarydata;
 
@@ -17,17 +20,36 @@ class Summerybuilder extends StatelessWidget {
               (data) {
                 return Row(
                   children: [
-                    Text(((data['question-index'] as int) + 1).toString()),
+                    // index number of question
+                    Container(
+                      decoration: BoxDecoration(
+                        color: data['user-selected'] == data['correct-answer']
+                            ? const Color.fromARGB(255, 127, 186, 144)
+                            : const Color.fromARGB(253, 207, 113, 106),
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(40)),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 10, vertical: 5),
+                        child: Text(
+                            ((data['question-index'] as int) + 1).toString()),
+                      ),
+                    ),
+                    // question and answer
                     Expanded(
-                      child: Column(
-                        children: [
-                          Text(data['question'] as String),
-                          const SizedBox(height: 10),
-                          Text(data['user-selected'] as String),
-                          const SizedBox(height: 10),
-                          Text(data['correct-answer'] as String),
-                          const SizedBox(height: 10)
-                        ],
+                      child: Padding(
+                        padding: const EdgeInsets.only(left: 30),
+                        child: Column(
+                          children: [
+                            Text(data['question'] as String),
+                            const SizedBox(height: 10),
+                            Text(data['user-selected'] as String),
+                            const SizedBox(height: 10),
+                            Text(data['correct-answer'] as String),
+                            const SizedBox(height: 10)
+                          ],
+                        ),
                       ),
                     )
                   ],
