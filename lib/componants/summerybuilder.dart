@@ -42,11 +42,26 @@ class Summerybuilder extends StatelessWidget {
                         padding: const EdgeInsets.only(left: 30),
                         child: Column(
                           children: [
-                            Text(data['question'] as String),
-                            const SizedBox(height: 10),
-                            Text(data['user-selected'] as String),
-                            const SizedBox(height: 10),
-                            Text(data['correct-answer'] as String),
+                            Text(
+                              data['question'] as String,
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                  color: Color.fromARGB(255, 228, 242, 245)),
+                            ),
+                            Text(
+                              data['user-selected'] as String,
+                              textAlign: TextAlign.left,
+                              style: TextStyle(
+                                  color:
+                                      const Color.fromARGB(255, 130, 251, 255)),
+                            ),
+                            Text(
+                              data['correct-answer'] as String,
+                              textAlign: TextAlign.start,
+                              style: TextStyle(
+                                  color:
+                                      const Color.fromARGB(255, 190, 255, 130)),
+                            ),
                             const SizedBox(height: 10)
                           ],
                         ),
