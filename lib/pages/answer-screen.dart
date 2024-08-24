@@ -37,7 +37,12 @@ class AnswerScreen extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             children: [
               Text(
-                  'You answered $correctanswers out of $numquestions correctly!'),
+                'You answered $correctanswers out of $numquestions correctly!',
+                textAlign: TextAlign.center,
+                style: const TextStyle(
+                    fontSize: 25, color: Color.fromARGB(255, 68, 255, 180)),
+              ),
+
               // result summery
               Summerybuilder(
                 summarydata: summerydata,

@@ -39,30 +39,31 @@ class Summerybuilder extends StatelessWidget {
                     // question and answer
                     Expanded(
                       child: Padding(
-                        padding: const EdgeInsets.only(left: 30),
+                        padding: const EdgeInsets.only(left: 30, top: 20),
                         child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
                               data['question'] as String,
-                              textAlign: TextAlign.left,
-                              style: TextStyle(
+                              style: const TextStyle(
+                                  fontSize: 20,
                                   color: Color.fromARGB(255, 228, 242, 245)),
                             ),
+                            SizedBox(height: 5),
                             Text(
                               data['user-selected'] as String,
-                              textAlign: TextAlign.left,
-                              style: TextStyle(
-                                  color:
-                                      const Color.fromARGB(255, 130, 251, 255)),
+                              style: const TextStyle(
+                                  fontSize: 15,
+                                  color: Color.fromARGB(255, 130, 251, 255)),
                             ),
+                            SizedBox(height: 5),
                             Text(
                               data['correct-answer'] as String,
-                              textAlign: TextAlign.start,
-                              style: TextStyle(
-                                  color:
-                                      const Color.fromARGB(255, 190, 255, 130)),
+                              style: const TextStyle(
+                                  fontSize: 15,
+                                  color: Color.fromARGB(255, 190, 255, 130)),
                             ),
-                            const SizedBox(height: 10)
+                            const SizedBox(height: 5)
                           ],
                         ),
                       ),
