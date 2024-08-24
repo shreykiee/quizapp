@@ -48,7 +48,8 @@ class AnswerScreen extends StatelessWidget {
                 summarydata: summerydata,
               ),
               //restart quiz
-              ElevatedButton(onPressed: () {}, child: Text('restart quiz'))
+              ElevatedButton(
+                  onPressed: () {}, child: const Text('restart quiz'))
             ],
           ),
         ),

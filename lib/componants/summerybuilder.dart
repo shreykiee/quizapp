@@ -49,14 +49,14 @@ class Summerybuilder extends StatelessWidget {
                                   fontSize: 20,
                                   color: Color.fromARGB(255, 228, 242, 245)),
                             ),
-                            SizedBox(height: 5),
+                            const SizedBox(height: 5),
                             Text(
                               data['user-selected'] as String,
                               style: const TextStyle(
                                   fontSize: 15,
                                   color: Color.fromARGB(255, 130, 251, 255)),
                             ),
-                            SizedBox(height: 5),
+                            const SizedBox(height: 5),
                             Text(
                               data['correct-answer'] as String,
                               style: const TextStyle(
