@@ -13,11 +13,7 @@ class Quiz extends StatefulWidget {
 
 class _QuizState extends State<Quiz> {
   final List<String> selectedanswers = [];
-  late Widget currentscreen;
-  void initState() {
-    super.initState();
-    currentscreen = Startquiz(changescreen: changescreen);
-  }
+  late Widget currentscreen = Startquiz(changescreen: changescreen);
 
   // saving the answers
   void chooseanswer(String answer) {
@@ -26,6 +22,7 @@ class _QuizState extends State<Quiz> {
       setState(() {
         currentscreen = AnswerScreen(
           selectedanswers: selectedanswers,
+          changescreen: changescreen,
         );
       });
     }
@@ -34,6 +31,7 @@ class _QuizState extends State<Quiz> {
   void changescreen() {
     setState(() {
       currentscreen = Quizquestions(chooseanswer: chooseanswer);
+      selectedanswers.clear();
     });
   }
 
