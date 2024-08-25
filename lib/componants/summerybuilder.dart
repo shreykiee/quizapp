@@ -10,10 +10,9 @@ class Summerybuilder extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 550,
+    return Expanded(
       child: Padding(
-        padding: const EdgeInsets.all(20),
+        padding: const EdgeInsets.only(left: 20, right: 20),
         child: SingleChildScrollView(
           child: Column(
             children: summarydata.map(
@@ -63,7 +62,6 @@ class Summerybuilder extends StatelessWidget {
                                   fontSize: 15,
                                   color: Color.fromARGB(255, 190, 255, 130)),
                             ),
-                            const SizedBox(height: 5)
                           ],
                         ),
                       ),

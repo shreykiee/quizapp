@@ -34,9 +34,10 @@ class AnswerScreen extends StatelessWidget {
       backgroundColor: Colors.transparent,
       body: Center(
         child: Padding(
-          padding: const EdgeInsets.all(30),
+          padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 100),
           child: Container(
             decoration: const BoxDecoration(
+              borderRadius: BorderRadius.all(Radius.circular(20)),
               gradient: RadialGradient(
                 colors: [
                   Color.fromARGB(255, 58, 8, 104),
@@ -54,7 +55,7 @@ class AnswerScreen extends StatelessWidget {
               ],
             ),
             child: Padding(
-              padding: const EdgeInsets.all(20),
+              padding: const EdgeInsets.only(top: 20),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
@@ -70,9 +71,12 @@ class AnswerScreen extends StatelessWidget {
                     summarydata: summerydata,
                   ),
                   //restart quiz
-                  ElevatedButton(
-                      onPressed: changescreen,
-                      child: const Text('restart quiz'))
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: ElevatedButton(
+                        onPressed: changescreen,
+                        child: const Text('restart quiz')),
+                  )
                 ],
               ),
             ),
